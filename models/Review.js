@@ -29,6 +29,15 @@ Review.init(
                 key: "id"
             },
         },
+        // game tied to review 
+        game_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "game",
+                key: "id"
+            },
+        },
     },
     {
         // sequelize 
