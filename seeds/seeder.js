@@ -1,6 +1,7 @@
 // import modules
 const gameSeederData = require('./games.js');
 const { Game } = require('../models');
+const sequelize = require('../config/connection.js');
 
 // func to seed db with bulkcreate 
 const seedDatabase = async () => {
@@ -8,7 +9,10 @@ const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
     // bulk create games
-    const games = await Game.bulkCreate(gameSeederData, {});
+    const games = await Game.bulkCreate(gameSeederData, {
+        individualHooks: true, 
+        returning: true,
+    });
 
     // exit process after seeding 
     process.exit(0);
