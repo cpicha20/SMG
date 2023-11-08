@@ -11,7 +11,8 @@ const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
     // bulk create games
-    const games = await Game.bulkCreate(gameSeederData, {});
+    const populateGamesFile = await gameSeederData;
+    const games = await Game.bulkCreate('./games.json', {});
 
     // bulk create users
     //const users = await User.bulkCreate(userSeederData, {});
