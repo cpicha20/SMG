@@ -2,7 +2,7 @@
 const gameSeederData = require('./games.js');
 //const reviewSeederData = require('./reviews.js');
 //const userSeederData = require('./users.js');
-const { Game, Review, User } = require('../models');
+const { User, Review, Game } = require('../models');
 const sequelize = require('../config/connection.js');
 
 // func to seed db with bulkcreate 
