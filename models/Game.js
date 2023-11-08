@@ -22,11 +22,10 @@ Game.init(
             allowNull: false,
         },
         // description ("summary" in api)
-        decription:{
+        decription: {
             type: DataTypes.STRING,
-            allowNull: false,
         },
-        // url for photo (make seperate call with game id)
+        // url for photo (make seperate call with cover id)
         photo_url: {
             type: DataTypes.STRING,
             allowNull: false,
