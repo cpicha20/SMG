@@ -41,8 +41,10 @@ const getImageUrl = async (coverImageId) => {
         })
         // set image url to url from response
         const imageUrl = response.data[0].url;
+    
+        const largerImageUrl = imageUrl.replace(/t_thumb/, 't_cover_big');
         // return url
-        return imageUrl;
+        return largerImageUrl;
     } catch (error) { // catch error
         console.error('An error occurred:', error);
         return null;
