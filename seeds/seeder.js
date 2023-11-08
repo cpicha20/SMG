@@ -9,10 +9,7 @@ const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
     // bulk create games
-    const games = await Game.bulkCreate(gameSeederData, {
-        individualHooks: true, 
-        returning: true,
-    });
+    const games = await Game.bulkCreate(gameSeederData, {});
 
     // exit process after seeding 
     process.exit(0);
