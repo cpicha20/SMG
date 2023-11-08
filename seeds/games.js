@@ -43,7 +43,7 @@ const fetchGame = async () => {
             'Client-ID': apiKey,
             'Authorization': `Bearer ${token}`,
         },
-        data: 'fields name, summary, cover; limit 15;'
+        data: 'fields name, summary, cover; limit 40; where rating >= 70;'
     })
         // array of game obj 
         .then(async (res) => {
