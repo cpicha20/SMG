@@ -1,14 +1,13 @@
-<div class="flexbox">
+<div class="flexbox row">
 {{#each games as |game|}}
   
-    <div class="gameCard">
+    <div class="gameCard col s3" >
       <div class="card">
         <div class="card-image">
-          <img src="images/sample-1.jpg">
-          <span class="card-title">Card Title</span>
+          <img src="{{game.photo_url}}">
         </div>
         <div class="card-action">
-          <a href=`/game/game.id`>This is a link</a>
+          <a href="/game/{{game.id}}">{{game.title}}</a>
         </div>
       </div>
     </div>

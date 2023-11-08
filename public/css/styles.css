@@ -3,6 +3,13 @@
 }
 
 .flexbox {
-  display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
+  
 }
 
+.gameCard{
+    /* max-width: 200px !important ; */
+    margin-left: 3% !important; 
+    width: 20% !important;
+}
