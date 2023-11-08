@@ -1,5 +1,5 @@
 // import modules
-const gameSeederData = require('./games.js');
+const gameSeederData = require('./games.json');
 //const reviewSeederData = require('./reviews.js');
 //const userSeederData = require('./users.js');
 const { User, Review, Game } = require('../models');
@@ -11,8 +11,7 @@ const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
     // bulk create games
-    const populateGamesFile = await gameSeederData;
-    const games = await Game.bulkCreate('./games.json', {});
+    const games = await Game.bulkCreate(gameSeederData, {});
 
     // bulk create users
     //const users = await User.bulkCreate(userSeederData, {});
