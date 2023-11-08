@@ -42,10 +42,5 @@ Collection.hasMany(Game, {
     foreignKey: 'game_id'
 });
 
-// each games has many collections
-Game.hasMany(Collection, {
-    foreignKey: 'game_id'
-});
-
 // export module 
 module.exports = { User, Review, Game, Collection }; 
