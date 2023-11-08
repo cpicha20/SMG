@@ -7,22 +7,39 @@
   <title>User Registry</title>
   <link rel="stylesheet" href="../../public/css/reset.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../../public/css/styles.css">
+
 </head>
 
 
 <body>
     <header>
-        <nav>
-            <Button class="logoBtn" id="logo"></Button>
-            <input type="text">
-
-            {{#if logged_in}}
-            <Button class="navBtn" id="profile"></Button>
-            {{/if}}
-
-            <Button class="navBtn" id="profile"></Button>
-
+        <nav class="purple">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Logo</a>
+                
+           
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                
+                    {{#if logged_in}}
+                      <li><a href="/">Profile</a></li>
+                      <li><a href="/">Logout</a></li>
+                    {{else}}
+                      <li><a href="/">Login</a></li>
+                    {{/if}}
+                </ul>  
+                
+         <form class=" hide-on-med-and-down" style="margin-left: 200px !important " id="search-bar" >
+          <div class="input-field" style="max-width: 400pt;">
+            <input id="search" type="search" required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+            <div id="searchResults" ></div>
+          </div>
+            </form>
+                
+            </div>
         </nav>
     </header>
     {{{ body }}}
