@@ -6,8 +6,10 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node app.js",
+
         "seed": "node seeds/seeder.js",
         "watch": "nodemon server"
+
     },
     "keywords": [],
     "author": "",
@@ -21,9 +23,11 @@
         "express-handlebars": "^5.2.0",
         "express-session": "^1.17.1",
         "mysql2": "^2.2.5",
-        "sequelize": "^6.3.5"
+        "sequelize": "^6.3.5",
+        "fs": "^0.0.1-security"
     },
     "devDependencies": {
         "nodemon": "^3.0.1"
+
     }
 }
