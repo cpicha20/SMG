@@ -4,7 +4,7 @@ const { Game } = require('../models');
 
 // get request for homepage
 router.get('/', async (req, res) => {
-    try {
+    try { 
         // get all games 
         const allGames = await Game.findAll({});
 
