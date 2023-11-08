@@ -1,7 +1,7 @@
 // import modules 
 const router = require('express').Router();
 const { User, Review, Game, Collection } = require('../models');
-const withAuth = require('../../utils/auth');
+const withAuth = require('../utils/auth');
 
 // get route to show profile 
 router.get('/', withAuth, async (req, res) => {
@@ -59,3 +59,6 @@ router.get('/', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+// export module 
+module.exports = router;
