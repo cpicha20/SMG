@@ -22,8 +22,8 @@ Game.init(
             allowNull: false,
         },
         // description ("summary" in api)
-        decription: {
-            type: DataTypes.STRING,
+        description: {
+            type: DataTypes.TEXT,
         },
         // url for photo (make seperate call with cover id)
         photo_url: {

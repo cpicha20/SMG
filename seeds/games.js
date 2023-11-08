@@ -4,6 +4,21 @@ const axios = require('axios');
 // import class
 const GameOBJ = require('./gameClass');
 
+// import fs 
+const fs = require("fs");
+
+// function to write to file 
+function appendToFile(fileName, data) {
+    // make a file from input 
+    fs.appendFile(fileName, data, function (err) {
+        console.log(err)
+    }
+    )
+}
+
+// output file
+const file = 'games.json';
+
 // api key
 const apiKey = process.env.CLIENT_ID;
 const token = process.env.ACCESS_TOKEN;
@@ -43,7 +58,7 @@ const fetchGame = async () => {
             'Client-ID': apiKey,
             'Authorization': `Bearer ${token}`,
         },
-        data: 'fields name, summary, cover; limit 40; where rating >= 70;'
+        data: 'fields name, summary, cover; limit 50; where rating >= 75;'
     })
         // array of game obj 
         .then(async (res) => {
@@ -65,6 +80,7 @@ const fetchGame = async () => {
                 games.push(thisGame);
             }
             //console.log(games);
+            appendToFile(`./${file}`, JSON.stringify(games, null, 2));
         })
         // catch err
         .catch(error => {
@@ -73,5 +89,5 @@ const fetchGame = async () => {
 }
 
 // export module
-module.exports = fetchGame;
+fetchGame();
 

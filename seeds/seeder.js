@@ -1,5 +1,5 @@
 // import modules
-const gameSeederData = require('./games.js');
+const gameSeederData = require('./games.json');
 //const reviewSeederData = require('./reviews.js');
 //const userSeederData = require('./users.js');
 const { User, Review, Game } = require('../models');
