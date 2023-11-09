@@ -5,16 +5,17 @@
     </div>
     <div class="col s6">
       <h2>{{game.title}}</h2>
-      <br />
+      <br/>
       <p>{{game.description}}</p>
+      <button id="add-game"> Add game </button>
     </div>
   </div>
   <div class="row">
     {{#if logged_in}}
-    <div class="col s12">
+    <form  class="col s12">
       <input class="black-text" id="review-input" type="text"/>
       <button id="post-review" type="submit">Post</button>
-    </div>
+    </form>
     {{/if}}
 
     <div>

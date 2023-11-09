@@ -28,3 +28,4 @@ const postReviewFormHandler = async (event) => {
 document
   .querySelector('#post-review')
   .addEventListener('click', postReviewFormHandler);
+
