@@ -1,0 +1,30 @@
+<div class="container" id="gameContainer">
+  <div class="row">
+    <div class="col s4">
+      <img src="{{game.photo_url}}" />
+    </div>
+    <div class="col s4">
+      <h2>{{game.title}}</h2>
+      <br />
+      <p>{{game.description}}</p>
+    </div>
+  </div>
+  <div>
+    <div>
+      <input id="review-input" type="text" />
+      <button id="post-review" type="submit">Post</button>
+    </div>
+
+    <div>
+      <div><h3>User Reviews</h3></div>
+      {{#each reviews as |review|}}
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+<script src="/js/review.js"></script>
