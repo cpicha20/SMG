@@ -1,6 +1,6 @@
 // import modules 
 const router = require('express').Router();
-const { User, Review, Game, Collection } = require('../models');
+const { User, Review, Game } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get route to show profile 
@@ -26,15 +26,13 @@ router.get('/', withAuth, async (req, res) => {
 
         // users collection
         // get game data 
-        const collectionData = await Collection.findByPk(
+        const collectionData = await Game.findByPk(
             {
                 where: {
                     user_id: req.session.user_id,
                 }
             }, 
-            {
-                include: { model: Game },
-            });
+           );
 
         // no games found 
         if (!collectionData) {
