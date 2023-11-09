@@ -3,7 +3,7 @@
 
     <div>
         <div id="username-title">
-            {{user.username}}
+            {{userData.username}}
         </div>
     </div>
     <div>
@@ -26,13 +26,12 @@
     </div>
     <div>
         <div id="user-reviews-header">
-            {{user.username}}'s Reviews
+            {{userData.username}}'s Reviews
         </div>
         <div>
             {{#each reviews as |review|}}
             <div>
-                <div></div>
-                <div></div>
+                <div>{{review.review_content}}</div>
             </div>
             {{/each}}
         </div>

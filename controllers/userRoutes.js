@@ -26,7 +26,7 @@ router.get('/', withAuth, async (req, res) => {
 
         // users collection
         // get game data 
-        const collectionData = await Game.findByPk(
+        const collectionData = await Game.findAll(
             {
                 where: {
                     user_id: req.session.user_id,
@@ -40,7 +40,7 @@ router.get('/', withAuth, async (req, res) => {
         }
 
         // serialize collection so the template can read it
-        const collection = collectionData.map((game) => game.get({ plain: true }));
+        const games = collectionData.map((game) => game.get({ plain: true }));
 
         // user profile
         const userData = await User.findByPk(req.session.user_id);
@@ -48,7 +48,7 @@ router.get('/', withAuth, async (req, res) => {
         // pass serialized reviews, game data and session flag into template
         res.render('profile', {
             reviews,
-            collection,
+            games,
             userData,
             logged_in: req.session.logged_in,
         });
