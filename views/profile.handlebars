@@ -33,9 +33,14 @@
         <div>
             {{#each reviews as |review|}}
 
-            <div class="row reviewCard">
-                <div class="col s12">{{review.review_content}}</div>
+            <a href="/game/{{review.game_id}}">
+
+                <div class="row reviewCard">
+                 <div id="review-game-id" class="col s3">{{review.game_id}}</div>
+                <div class="col s9">{{review.review_content}}</div>
             </div>
+
+            </a>
 
             {{/each}}
         </div>
