@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registry</title>
+  <title>Share My Games</title>
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -18,7 +18,7 @@
     <header>
         <nav class="purple">
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Logo</a>
+                <a href="/" class="brand-logo">Logo</a>
                 
            
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -26,6 +26,7 @@
                     {{#if logged_in}}
                       <li><a href="/profile">Profile</a></li>
                       <li><a id="logout">Logout</a></li>
+                      <script src="/js/logout.js"></script>
                     {{else}}
                       <li><a href="/login">Login</a></li>
                     {{/if}}
@@ -45,3 +46,4 @@
     </header>
     {{{ body }}}
 </body>
+
