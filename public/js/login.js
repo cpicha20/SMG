@@ -4,6 +4,8 @@ const loginFormHandler = async (event) => {
     const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
+
+
     console.log(username);
     console.log(password);
   
@@ -25,7 +27,6 @@ const loginFormHandler = async (event) => {
     }
   };
   
-
   
   document
     .querySelector('.login-form')

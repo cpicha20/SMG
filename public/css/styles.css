@@ -18,10 +18,18 @@ div button {
 
 .card {
   height: 95%;
+  background-color: rgba(156,39,176,255) !important;
+
+}
+
+.cardtitle{
+  color: whitesmoke !important; 
 }
 
 .card .card-img {
   height: 100%;
+  background-color: rgba(156,39,176,255);
+  color: whitesmoke !important;
 }
 
 .container{
@@ -38,5 +46,23 @@ div button {
 .gameCard{
     /* max-width: 200px !important ; */
     margin-left: 3% !important; 
+    margin-top: 3% !important; 
+
     width: 20% !important;
+
+}
+
+/* Game Page's special container */
+#gameContainer{
+ flex-direction: column; 
+}
+
+#gamePageCard{
+  margin-top: 2%;
+  background-color: rgba(156,39,176,255);
+  border-radius: 20px;
+  width: 100%;
+  color: whitesmoke; 
+  box-shadow: 2px 4px black;
+  
 }
