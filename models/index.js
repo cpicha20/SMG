@@ -5,7 +5,7 @@ const User = require('../models/User.js');
 
 // each review belongs to one user 
 Review.belongsTo(User, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
 });
 
 // game belongs to user 
@@ -16,7 +16,7 @@ Game.belongsTo(User, {
 // each game has many reviews
 Game.hasMany(Review, {
     foreignKey: 'game_id',
-    onDelete: 'CASCADE'
+    onDelete: 'CASCADE',
 });
 
 // export module 

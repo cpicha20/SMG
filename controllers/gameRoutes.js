@@ -15,12 +15,7 @@ router.get('/:id', async (req, res) => {
             });
 
         // get game data 
-        const gameData = await Game.findByPk(req.params.id,
-            {
-                where: {
-                    id: req.params.id
-                }
-            });
+        const gameData = await Game.findByPk(req.params.id);
 
         // no reveiws found 
         if (!reviewsForGame) {
@@ -35,10 +30,12 @@ router.get('/:id', async (req, res) => {
         // serialize reviews so the template can read it
         const reviews = reviewsForGame.map((review) => review.get({ plain: true }));
 
+        const game =  gameData.get({ plain : true });
+
         // pass serialized reviews, game data and session flag into template
         res.render('game', {
             reviews,
-            gameData,
+            game,
             logged_in: req.session.logged_in,
         });
     }
