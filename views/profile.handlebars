@@ -1,40 +1,39 @@
 <div class="container">
-
-
-    <div>
-        <div id="username-title">
-            {{user.username}}
+    <div class="profile-container">
+        <div class="section">
+            <div id="username-title">
+                {{user.username}}
+            </div>
         </div>
-    </div>
-    <div>
-        <div class="flexbox row">
-            {{#each games as |game|}}
+        <div class="section">
+            <div class="flexbox row">
+                {{#each games as |game|}}
 
-            <div class="gameCard col s3">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{{game.photo_url}}">
-                    </div>
-                    <div class="card-action">
-                        <a href="/game/{{game.id}}">{{game.title}}</a>
+                <div class="gameCard col s3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{game.photo_url}}">
+                        </div>
+                        <div class="card-action">
+                            <a href="/game/{{game.id}}">{{game.title}}</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            {{/each}}
+                {{/each}}
+            </div>
         </div>
-    </div>
-    <div>
-        <div id="user-reviews-header">
-            {{user.username}}'s Reviews
-        </div>
-        <div>
-            {{#each reviews as |review|}}
+        <div class="section">
+            <div id="user-reviews-header">
+                {{user.username}}'s Reviews
+            </div>
             <div>
-                <div>{{review.review_content}}</div>
+                {{#each reviews as |review|}}
+                <div>
+                    <div>{{review.review_content}}</div>
+                </div>
+                {{/each}}
             </div>
-            {{/each}}
         </div>
     </div>
-
 </div>
