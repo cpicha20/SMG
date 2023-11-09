@@ -1,12 +1,13 @@
-<div class="container">
-
-
-    <div>
+<div class="profile-container">
+    <div class="section">
         <div id="username-title">
             {{user.username}}
         </div>
     </div>
-    <div>
+
+    <div id="username-break"></div>
+    <div id="collection-text">Your Collection</div>
+    <div class="section collection-section">
         <div class="flexbox row">
             {{#each games as |game|}}
 
@@ -24,17 +25,19 @@
             {{/each}}
         </div>
     </div>
-    <div>
+    <div class="section review-section">
         <div id="user-reviews-header">
             {{user.username}}'s Reviews
         </div>
+        <div id="review-break"></div>
         <div>
             {{#each reviews as |review|}}
-            <div>
-                <div>{{review.review_content}}</div>
+
+            <div class="row reviewCard">
+                <div class="col s12">{{review.review_content}}</div>
             </div>
+
             {{/each}}
         </div>
     </div>
-
 </div>
