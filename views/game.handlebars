@@ -22,7 +22,7 @@
       <div><h3>User Reviews</h3></div>
       {{#each reviews as |review|}}
       <div class="row reviewCard">
-        <div class="col s3">{{review.user.username}}</div>
+        <div id="review-split" class="col s3">{{review.user.username}}</div>
         <div class="col s9">{{review.review_content}}</div>
       </div>
       {{/each}}
