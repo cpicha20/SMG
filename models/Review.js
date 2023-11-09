@@ -20,24 +20,6 @@ Review.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        // user who posted review
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: "user",
-                key: "id"
-            },
-        },
-        // game tied to review 
-        game_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: "game",
-                key: "id"
-            },
-        },
     },
     {
         // sequelize 

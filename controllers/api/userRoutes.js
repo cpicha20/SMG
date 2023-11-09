@@ -4,6 +4,7 @@ const { User } = require('../../models');
 
 // post request for signing up 
 router.post('/signup', async (req, res) => {
+  
   try {
     // crate new user 
     const userData = await User.create(req.body);
@@ -23,6 +24,7 @@ router.post('/signup', async (req, res) => {
 
 // post request to login to 
 router.post('/login', async (req, res) => {
+  console.log(req.body);
   try {
     // look for user by username
     const userData = await User.findOne(
