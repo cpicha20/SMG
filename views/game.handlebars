@@ -1,7 +1,7 @@
 <div class="container" id="gameContainer">
   <div class="row" id="gamePageCard">
     <div class="col 6">
-      <img src="{{game.photo_url}}" />
+      <img id="game-photo" src="{{game.photo_url}}" />
     </div>
     <div class="col s6">
       <h2>{{game.title}}</h2>
@@ -22,7 +22,7 @@
       <div><h3>User Reviews</h3></div>
       {{#each reviews as |review|}}
       <div class="row reviewCard">
-        <div class="col s3">{{review.user.username}}</div>
+        <div id="review-split" class="col s3">{{review.user.username}}</div>
         <div class="col s9">{{review.review_content}}</div>
       </div>
       {{/each}}
