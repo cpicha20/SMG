@@ -1,7 +1,7 @@
 // import modules
 const gameSeederData = require('./games.json');
 //const reviewSeederData = require('./reviews.js');
-//const userSeederData = require('./users.js');
+const userSeederData = require('./users.json');
 const { User, Review, Game } = require('../models');
 const sequelize = require('../config/connection.js');
 
@@ -11,10 +11,18 @@ const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
     // bulk create games
-    const games = await Game.bulkCreate(gameSeederData, {});
+    const games = await Game.bulkCreate(gameSeederData, {
+        individualHooks: true,
+        returning: true,
+    }
+    );
 
     // bulk create users
-    //const users = await User.bulkCreate(userSeederData, {});
+    const users = await User.bulkCreate(userSeederData, {
+        individualHooks: true,
+        returning: true,
+    }
+    );
 
     // bulk create reviews
     //const reviews = await Review.bulkCreate(reviewSeederData, {});

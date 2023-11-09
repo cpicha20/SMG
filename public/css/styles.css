@@ -1,3 +1,12 @@
+div label {
+  font-size: 1.4rem;
+}
+
+div button {
+  margin-left: 13rem;
+  margin-right: 6rem;
+}
+
 #search-bar {
   margin-left: 200px;
 }
@@ -5,7 +14,25 @@
 .flexbox {
   display: inline-flex;
   flex-wrap: wrap;
-  
+}
+
+.card {
+  height: 95%;
+}
+
+.card .card-img {
+  height: 100%;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 45rem;
+  padding-top: 4rem;
 }
 
 .gameCard{

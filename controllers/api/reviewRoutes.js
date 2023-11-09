@@ -54,8 +54,9 @@ router.post('/', withAuth, async (req, res) => {
         // create new review using body of request 
         const newReview = await Review.create(
             {
-                review: req.body.review,
-                user_id: req.session.user_id,
+                review_content: req.body.review_content,
+                user_id: req.body.user_id,
+                game_id: req.body.game_id,
             });
 
         // no reveiw created 
@@ -76,7 +77,7 @@ router.post('/:id', withAuth, async (req, res) => {
         // update review using body of request  
         const updateThisReview = await Review.update(
             {
-                review: req.body.review
+                review_content: req.body.review_content
             },
             {
                 where: {
