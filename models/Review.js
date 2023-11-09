@@ -3,7 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // review model
-class Review extends Model { }
+class Review extends Model {}
 
 // review constructor
 Review.init(
