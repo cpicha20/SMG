@@ -3,7 +3,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // post request for signing up 
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
     // crate new user 
     const userData = await User.create(req.body);
@@ -36,7 +36,7 @@ router.post('/login', async (req, res) => {
     if (!userData) {
       res
         .status(400)
-        .json({ message: 'Incorrect username or password, please try again' });
+        .json({ message: 'Incorrect username, please try again' });
       return;
     }
 
@@ -47,7 +47,7 @@ router.post('/login', async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
+        .json({ message: 'Incorrect password for ' + userData.username + ', please try again' });
       return;
     }
 

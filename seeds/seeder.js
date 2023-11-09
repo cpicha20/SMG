@@ -1,7 +1,7 @@
 // import modules
 const gameSeederData = require('./games.json');
 //const reviewSeederData = require('./reviews.js');
-//const userSeederData = require('./users.js');
+//const userSeederData = require('./users.json');
 const { User, Review, Game } = require('../models');
 const sequelize = require('../config/connection.js');
 

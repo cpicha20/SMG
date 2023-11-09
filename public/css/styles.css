@@ -16,6 +16,14 @@ div button {
   flex-wrap: wrap;
 }
 
+.card {
+  height: 95%;
+}
+
+.card .card-img {
+  height: 100%;
+}
+
 .container{
   display: flex;
   align-items: center;
