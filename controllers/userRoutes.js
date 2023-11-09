@@ -45,11 +45,13 @@ router.get('/', withAuth, async (req, res) => {
         // user profile
         const userData = await User.findByPk(req.session.user_id);
 
+        const user = userData.get({ plain : true});
+
         // pass serialized reviews, game data and session flag into template
         res.render('profile', {
             reviews,
             games,
-            userData,
+            user,
             logged_in: req.session.logged_in,
         });
     }
