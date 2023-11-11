@@ -137,6 +137,7 @@ div button {
 /* Game Page's special container */
 #gameContainer {
   flex-direction: column;
+  height: 100vh;
 }
 
 #gamePageCard {
@@ -203,6 +204,10 @@ div button {
 #review-change-container {
   display: flex;
   justify-content: space-around;
+}
+
+#add-game {
+  margin: 1rem;
 }
 
 @-webkit-keyframes animatetop {
