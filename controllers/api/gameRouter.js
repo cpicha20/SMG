@@ -4,14 +4,15 @@ const { Game } = require('../../models');
 
 // post request for adding game to collection 
 router.put('/', async (req, res) => {
+    //console.log(req.body);
 
     try {
         const insertThisGame = await Game.update({
-            user_id: req.body.user_id
+            user_id: req.session.user_id
         },
         {
             where: {
-                id: req.params.game_id,
+                id: req.body.game_id,
             },
         });
 
