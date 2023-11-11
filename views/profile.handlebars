@@ -7,7 +7,7 @@
 
     <div id="username-break"></div>
     <div id="collection-text">Your Collection</div>
-    <br>
+    <br></br>
     <div class="section collection-section">
         <div class="flexbox row">
             {{#each games as |game|}}
@@ -34,16 +34,37 @@
         <div>
             {{#each reviews as |review|}}
 
-            <a href="/game/{{review.game_id}}">
+            <div>
+                <a href="/game/{{review.game_id}}">
 
-                <div class="row reviewCard">
-                 <div id="review-split" class="col s3">{{review.game_id}}</div>
-                <div class="col s9">{{review.review_content}}</div>
+                    <div class="row reviewCard">
+                        <div id="review-split" class="col s3">{{review.game_id}}</div>
+                        <div class="col s9">{{review.review_content}}</div>
+                    </div>
+
+                </a>
+
+                <div id="review-change-container">
+
+                    <a id="edit-btn" href="/profile">
+
+                        <i class="fa-regular fa-pen-to-square" style="color: #d9c812;"></i>
+
+                    </a>
+                    
+                    <a id="delete-btn" href="/profile">
+
+                        <i class="fa-regular fa-trash-can" style="color: #ae2d2d;"></i>
+
+                    </a>
+
+                </div>
             </div>
-
-            </a>
 
             {{/each}}
         </div>
     </div>
-</br>
+</div>
+
+<script src="/js/deleteReview.js"></script>
+<script src="/js/updateReview.js"></script>

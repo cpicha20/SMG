@@ -151,3 +151,8 @@ div button {
 #review-split {
   border-right: 1px solid black;
 }
+
+#review-change-container {
+  display: flex;
+  justify-content: space-around;
+}
