@@ -24,17 +24,17 @@ div button {
 
 .card {
   height: 95%;
-  background-color: rgba(156,39,176,255) !important;
+  background-color: rgba(156, 39, 176, 255) !important;
 
 }
 
-.cardtitle{
-  color: whitesmoke !important; 
+.cardtitle {
+  color: whitesmoke !important;
 }
 
 .card .card-img {
   height: 100%;
-  background-color: rgba(156,39,176,255);
+  background-color: rgba(156, 39, 176, 255);
   color: whitesmoke !important;
 }
 
@@ -50,13 +50,13 @@ div button {
   color: whitesmoke;
 }
 
-.container{
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.profile-container{
+.profile-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,11 +72,11 @@ div button {
   padding-top: 4rem;
 }
 
-.gameCard{
-    /* max-width: 200px !important ; */
-    margin-left: 3% !important; 
-    margin-top: 3% !important; 
-    width: 20% !important;
+.gameCard {
+  /* max-width: 200px !important ; */
+  margin-left: 3% !important;
+  margin-top: 3% !important;
+  width: 20% !important;
 }
 
 .review-section {
@@ -86,17 +86,65 @@ div button {
   align-items: center;
 }
 
-/* Game Page's special container */
-#gameContainer{
- flex-direction: column; 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  overflow: auto;
 }
 
-#gamePageCard{
+.modal-content {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  border: 1px solid #888;
+  width: 95%;
+  height: 95%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.close {
+  color: rgba(39, 38, 38, 0.884);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: rgba(39, 38, 38, 0.884);
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+/* Game Page's special container */
+#gameContainer {
+  flex-direction: column;
+}
+
+#gamePageCard {
   margin-top: 2%;
-  background-color: rgba(156,39,176,255);
+  background-color: rgba(156, 39, 176, 255);
   border-radius: 20px;
   width: 100%;
-  color: whitesmoke; 
+  color: whitesmoke;
   box-shadow: 2px 4px black;
 }
 
@@ -155,4 +203,28 @@ div button {
 #review-change-container {
   display: flex;
   justify-content: space-around;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
 }
