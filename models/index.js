@@ -11,6 +11,7 @@ Review.belongsTo(User, {
 // game belongs to user 
 Game.belongsTo(User, {
     foreignKey: 'user_id',
+    onUpdate: 'CASCADE',
 });
 
 // each game has many reviews

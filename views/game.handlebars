@@ -1,28 +1,36 @@
 <div class="container" id="gameContainer">
   <div class="row" id="gamePageCard">
     <div class="col 6">
-      <img src="{{game.photo_url}}" />
+      <img id="game-photo" src="{{game.photo_url}}" />
     </div>
     <div class="col s6">
       <h2>{{game.title}}</h2>
-      <br/>
+      <br />
       <p>{{game.description}}</p>
-      <button id="add-game"> Add game </button>
+      {{#if logged_in}}
+      <button class="btn-small waves-effect waves-light #6a1b9a purple darken-3" id="add-game" type="button">Add game
+        <i class="material-icons right">cloud</i>
+      </button>
+      {{/if}}
     </div>
   </div>
   <div class="row">
     {{#if logged_in}}
-    <form  class="col s12">
-      <input class="black-text" id="review-input" type="text"/>
-      <button id="post-review" type="submit">Post</button>
+    <form class="col s12">
+      <input class="black-text" id="review-input" type="text" />
+      <button class="btn waves-effect waves-light #6a1b9a purple darken-3" id="post-review" type="submit">
+        Post<i class="material-icons right">send</i>
+      </button>
     </form>
     {{/if}}
 
     <div>
-      <div><h3>User Reviews</h3></div>
+      <div>
+        <h3>User Reviews</h3>
+      </div>
       {{#each reviews as |review|}}
       <div class="row reviewCard">
-        <div class="col s3">{{review.user.username}}</div>
+        <div id="review-split" class="col s3">{{review.user.username}}</div>
         <div class="col s9">{{review.review_content}}</div>
       </div>
       {{/each}}
@@ -30,4 +38,6 @@
   </div>
 </div>
 
+
 <script src="/js/review.js"></script>
+<script src="/js/addGame.js"></script>

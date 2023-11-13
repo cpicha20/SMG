@@ -7,12 +7,13 @@
 
     <div id="username-break"></div>
     <div id="collection-text">Your Collection</div>
+    <br></br>
     <div class="section collection-section">
         <div class="flexbox row">
             {{#each games as |game|}}
 
-            <div class="gameCard col s3">
-                <div class="card">
+            <div id="collection-card" class="gameCard col s4">
+                <div id="collection-card-size" class="card">
                     <div class="card-image">
                         <img src="{{game.photo_url}}">
                     </div>
@@ -33,11 +34,61 @@
         <div>
             {{#each reviews as |review|}}
 
-            <div class="row reviewCard">
-                <div class="col s12">{{review.review_content}}</div>
+            <div>
+                <a href="/game/{{review.game_id}}">
+
+                    <div class="row reviewCard">
+
+                        <div id="review-split" class="col s3">{{review.game_id}}</div>
+
+                        <div class="col s9">
+                            {{review.review_content}}
+                        </div>
+
+                    </div>
+
+                </a>
+
+                <div id="reviewModal" class="modal">
+
+                    <!-- Modal content for updating review -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Update Review</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <label for="review">Review:</label><br>
+                                <input type="text" id="review" value="{{review.review_content}}"><br>
+                                <a href="" class="btn #6a1b9a purple darken-3" id="save-btn">Submit</a>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div data-id={{review.id}} id="review-change-container">
+
+                    <a id="edit-btn" href="">
+
+                        <i class="fa-regular fa-pen-to-square" style="color: #d9c812;"></i>
+
+                    </a>
+
+                    <a id="delete-btn" href="">
+
+                        <i class="fa-regular fa-trash-can" style="color: #ae2d2d;"></i>
+
+                    </a>
+
+                </div>
             </div>
 
             {{/each}}
         </div>
     </div>
 </div>
+
+<script src="/js/deleteReview.js"></script>
+<script src="/js/updateReview.js"></script>

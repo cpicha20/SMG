@@ -1,3 +1,8 @@
+:root {
+  --purple: #7745ED;
+  --pink: #9C27B0;
+
+}
 
 div label {
   font-size: 1.4rem;
@@ -19,27 +24,40 @@ div button {
 
 .card {
   height: 95%;
-  background-color: rgba(156,39,176,255) !important;
+  background-color: rgba(156, 39, 176, 255) !important;
 
 }
 
-.cardtitle{
-  color: whitesmoke !important; 
+.cardtitle {
+  color: whitesmoke !important;
 }
 
 .card .card-img {
   height: 100%;
-  background-color: rgba(156,39,176,255);
+  background-color: rgba(156, 39, 176, 255);
   color: whitesmoke !important;
 }
 
-.container{
+.reviewCard {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(90deg, var(--pink), var(--purple));
+  width: 100%;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  height: 100%;
+  padding: .7rem;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.profile-container{
+.profile-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,13 +73,13 @@ div button {
   padding-top: 4rem;
 }
 
-.gameCard{
-    /* max-width: 200px !important ; */
-    margin-left: 3% !important; 
-    margin-top: 3% !important; 
-
-    width: 20% !important;
+.gameCard {
+  /* max-width: 200px !important ; */
+  margin-left: 3% !important;
+  margin-top: 3% !important;
+  width: 20% !important;
 }
+
 
 .review-section {
   display: flex;
@@ -70,19 +88,78 @@ div button {
   align-items: center;
 }
 
-/* Game Page's special container */
-#gameContainer{
- flex-direction: column; 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  overflow: auto;
 }
 
-#gamePageCard{
+.modal-content {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  border: 1px solid #888;
+  width: 95%;
+  height: 95%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.close {
+  color: rgba(39, 38, 38, 0.884);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: rgba(39, 38, 38, 0.884);
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+/* Game Page's special container */
+#gameContainer {
+  flex-direction: column;
+  height: 100vh;
+}
+
+#gamePageCard {
   margin-top: 2%;
-  background-color: rgba(156,39,176,255);
+  background-color: rgba(156, 39, 176, 255);
   border-radius: 20px;
   width: 100%;
-  color: whitesmoke; 
+  color: whitesmoke;
   box-shadow: 2px 4px black;
-  
+}
+
+#view-height {
+  height: 100vh;
+}
+
+#game-photo {
+  padding: 1rem;
+  border-radius: 25px 0 0 25px;
+  width: 100%;
+  height: 26rem;
 }
 
 #username-title {
@@ -93,7 +170,7 @@ div button {
 
 #username-break {
   width: 100%;
-  background: linear-gradient(90deg, #9C27B0, #7745ED);
+  background: linear-gradient(90deg, var(--pink), var(--purple));
   height: .9rem;
 }
 
@@ -103,7 +180,7 @@ div button {
 }
 
 #review-break {
-  border-bottom: .4rem solid #9C27B0;
+  border-bottom: .4rem solid var(--purple);
   height: 1rem;
   width: 45%;
 }
@@ -116,6 +193,49 @@ div button {
   padding-top: 2rem;
   font-size: 1.7rem;
   border-bottom: #9C27B0;
-  position: fixed;
-  left: 4rem;
+}
+
+#collection-card {
+  margin: 3rem;
+}
+
+#collection-card-size {
+  width: 7rem;
+}
+
+#review-split {
+  border-right: 1px solid black;
+}
+
+#review-change-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#add-game {
+  margin: 1rem;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
 }

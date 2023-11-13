@@ -17,7 +17,7 @@ Review.init(
         },
         // review content
         review_content: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
     },
