@@ -7,12 +7,13 @@
 
     <div id="username-break"></div>
     <div id="collection-text">Your Collection</div>
+    <br>
     <div class="section collection-section">
         <div class="flexbox row">
             {{#each games as |game|}}
 
-            <div class="gameCard col s3">
-                <div class="card">
+            <div id="collection-card" class="gameCard col s4">
+                <div id="collection-card-size" class="card">
                     <div class="card-image">
                         <img src="{{game.photo_url}}">
                     </div>
@@ -45,4 +46,4 @@
             {{/each}}
         </div>
     </div>
-</div>
+</br>

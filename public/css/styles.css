@@ -138,8 +138,14 @@ div button {
   padding-top: 2rem;
   font-size: 1.7rem;
   border-bottom: #9C27B0;
-  position: fixed;
-  left: 4rem;
+}
+
+#collection-card {
+  margin: 3rem;
+}
+
+#collection-card-size {
+  width: 7rem;
 }
 
 #review-split {

@@ -12,7 +12,7 @@ const addGameToCollection = async (event) => {
         // send game_id to server 
         const response = await fetch('/api/games', {
             method: 'PUT',
-            body: JSON.stringify({ game_id, user_id }),
+            body: JSON.stringify({ game_id }),
             headers: { 'Content-Type': 'application/json' },
         });
 
