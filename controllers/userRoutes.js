@@ -1,11 +1,12 @@
 // import modules 
 const router = require('express').Router();
+const { GEOMETRY } = require('sequelize');
 const { User, Review, Game } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get route to show profile 
 router.get('/', withAuth, async (req, res) => {
-     
+
     try { // try 
         // users reviews
         // get reviews with user id 
@@ -15,6 +16,8 @@ router.get('/', withAuth, async (req, res) => {
                     user_id: req.session.user_id,
                 }
             });
+
+            console.log(reviewsForUser);
 
         // no reveiws found 
         if (!reviewsForUser) {
@@ -31,8 +34,8 @@ router.get('/', withAuth, async (req, res) => {
                 where: {
                     user_id: req.session.user_id,
                 }
-            }, 
-           );
+            },
+        );
 
         // no games found 
         if (!collectionData) {
@@ -45,7 +48,7 @@ router.get('/', withAuth, async (req, res) => {
         // user profile
         const userData = await User.findByPk(req.session.user_id);
 
-        const user = userData.get({ plain : true});
+        const user = userData.get({ plain: true });
 
         // pass serialized reviews, game data and session flag into template
         res.render('profile', {
