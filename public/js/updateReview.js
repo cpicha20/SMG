@@ -57,6 +57,8 @@ const updateReviewHandler = async (event) => {
 }
 
 // event listeners
+
 editBtn.addEventListener('click', openModal);
+
 closeBtn.addEventListener('click', closeModal);
 saveBtn.addEventListener('click', updateReviewHandler);

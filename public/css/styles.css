@@ -4,6 +4,11 @@
 
 }
 
+body{
+  background-color: rgba(218, 218, 218, 0.185);
+  background-image: url(../assets/noise-texture-grunge-dust-grain-messy-overlay-abstract-dark-background_1962-396.jpg);
+}
+
 div label {
   font-size: 1.4rem;
 }
