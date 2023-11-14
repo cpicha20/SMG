@@ -20,5 +20,6 @@ Game.hasMany(Review, {
     onDelete: 'CASCADE',
 });
 
+
 // export module 
 module.exports = { User, Review, Game }; 
