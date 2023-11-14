@@ -30,7 +30,7 @@
       </div>
       {{#each reviews as |review|}}
       <div class="row reviewCard">
-        <div id="review-split" class="col s3"><a class="userAtag white-text" href="">{{review.user.username}}</a></div>
+        <div id="review-split" class="col s3"><a class="userAtag white-text" href="/profile/{{review.user.id}}">{{review.user.username}}</a></div>
         <div class="col s9">{{review.review_content}}</div>
       </div>
       {{/each}}

@@ -63,5 +63,65 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
+
+router.get('/:id', withAuth, async (req, res) => {
+
+    try { // try 
+        // users reviews
+        // get reviews with user id 
+        const reviewsForUser = await Review.findAll(
+            {
+                where: {
+                    user_id: req.params.id,
+                }
+            });
+
+            console.log(reviewsForUser);
+
+        // no reveiws found 
+        if (!reviewsForUser) {
+            console.log("No reviews found for this user");
+        }
+
+        // serialize reviews so the template can read it
+        const reviews = reviewsForUser.map((review) => review.get({ plain: true }));
+
+        // users collection
+        // get game data 
+        const collectionData = await Game.findAll(
+            {
+                where: {
+                    user_id: req.params.id,
+                }
+            },
+        );
+
+        // no games found 
+        if (!collectionData) {
+            console.log("No collection found for this user");
+        }
+
+        // serialize collection so the template can read it
+        const games = collectionData.map((game) => game.get({ plain: true }));
+
+        // user profile
+        const userData = await User.findByPk(req.params.id);
+
+        const user = userData.get({ plain: true });
+
+        // pass serialized reviews, game data and session flag into template
+        res.render('profile', {
+            reviews,
+            games,
+            user,
+            logged_in: req.session.logged_in,
+        });
+    }
+    catch (err) { // catch err
+        res.status(500).json(err);
+    }
+});
+
+
 // export module 
 module.exports = router;
