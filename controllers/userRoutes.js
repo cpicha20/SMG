@@ -64,7 +64,7 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 //get profile page by userId
-router.get('/:id', withAuth, async (req, res) => {
+router.get('/:id', async (req, res) => {
 
     try { // try 
         // users reviews
@@ -114,7 +114,6 @@ router.get('/:id', withAuth, async (req, res) => {
             reviews,
             games,
             user,
-            logged_in: req.session.logged_in,
         });
     }
     catch (err) { // catch err
