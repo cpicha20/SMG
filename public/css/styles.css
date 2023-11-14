@@ -4,13 +4,19 @@
 
 }
 
+*{font-family: 'DM Mono', monospace;}
+
 nav{
   background: linear-gradient(90deg, var(--pink), var(--purple));
+  margin-bottom: 1%;
 }
 
 body{
 
-  background-color: rgba(218, 218, 218, 0.185);
+  background-color: rgba(255, 255, 255, 0.747);
+  background-image: url(../assets/subtle_light_gray_background.jpg);
+  background-blend-mode: overlay;
+
  
 }
 
@@ -46,6 +52,12 @@ div button {
   height: 100%;
   background-color: rgba(156, 39, 176, 255);
   color: whitesmoke !important;
+  
+}
+
+textarea{
+  resize: none;
+  padding: 5px;
 }
 
 #review-form{
@@ -53,11 +65,14 @@ div button {
   border-style: solid;
   border-radius: 20px;
   border-image: linear-gradient(90deg, var(--pink), var(--purple)) 1;
+  margin-bottom: 5%;
+  
 }
 
 #review-input{
   margin-top: 5px;
   height: 100px;
+  background-color: white;
 
 }
 
@@ -101,6 +116,13 @@ div button {
   margin-left: 3% !important;
   margin-top: 3% !important;
   width: 20% !important;
+  border-radius: 20% !important;
+}
+
+#homeHeader{
+  text-align: center;
+  border-bottom: 3px solid #7745ED;
+
 }
 
 
@@ -170,21 +192,30 @@ div button {
   background:  linear-gradient(90deg, var(--pink), var(--purple)) !important;
   border-radius: 20px;
   width: 80%;
-  color: whitesmoke;
+  color: white !important;
   box-shadow: 2px 4px black;
+  min-width: 50%;
 }
 
 #game-title{
   border-bottom: 2px solid white;
 }
 
+#game-desc{
+  font-family: 'Roboto', sans-serif;
+}
 
 #post-review{
- margin-left: 75%;
+ margin-left: 77%;
+ margin-bottom: 3px;
+}
+
+.review-div{
+padding-top: 20px;
 }
 
 #gamepage-reviews-header{
-
+  padding-top: 20px;
   border-bottom: 3px solid #7745ED;
 }
 

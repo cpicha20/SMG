@@ -16,6 +16,7 @@
   </div>
   <div class="row">
     {{#if logged_in}}
+        <h3>Post Review</h3>
     <form id="review-form" class="col s12">
       <textarea class="black-text" id="review-input" type="text" rows="10" tabindex="4"></textarea>
       <button class="btn waves-effect waves-light #6a1b9a purple darken-3" id="post-review" type="submit">
@@ -24,7 +25,7 @@
     </form>
     {{/if}}
 
-    <div>
+    <div class="review-div">
       <div id="gamepage-reviews-header">
         <h3>User Reviews</h3>
       </div>

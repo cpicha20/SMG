@@ -63,7 +63,7 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-
+//get profile page by userId
 router.get('/:id', withAuth, async (req, res) => {
 
     try { // try 
