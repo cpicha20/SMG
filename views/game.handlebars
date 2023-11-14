@@ -4,9 +4,9 @@
       <img id="game-photo" src="{{game.photo_url}}" />
     </div>
     <div class="col s6">
-      <h2>{{game.title}}</h2>
-      <br />
-      <p>{{game.description}}</p>
+      <div id="game-title"> <h2 >{{game.title}}</h2></div>
+      <br/>
+       <div><p id="game-desc">{{game.description}}</p></div>
       {{#if logged_in}}
       <button class="btn-small waves-effect waves-light #6a1b9a purple darken-3" id="add-game" type="button">Add game
         <i class="material-icons right">cloud</i>
@@ -16,8 +16,8 @@
   </div>
   <div class="row">
     {{#if logged_in}}
-    <form class="col s12">
-      <input class="black-text" id="review-input" type="text" />
+    <form id="review-form" class="col s12">
+      <textarea class="black-text" id="review-input" type="text" rows="10" tabindex="4"></textarea>
       <button class="btn waves-effect waves-light #6a1b9a purple darken-3" id="post-review" type="submit">
         Post<i class="material-icons right">send</i>
       </button>
@@ -25,12 +25,12 @@
     {{/if}}
 
     <div>
-      <div>
+      <div id="gamepage-reviews-header">
         <h3>User Reviews</h3>
       </div>
       {{#each reviews as |review|}}
       <div class="row reviewCard">
-        <div id="review-split" class="col s3">{{review.user.username}}</div>
+        <div id="review-split" class="col s3"><a class="userAtag white-text" href="">{{review.user.username}}</a></div>
         <div class="col s9">{{review.review_content}}</div>
       </div>
       {{/each}}
