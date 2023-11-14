@@ -3,7 +3,7 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Contributors](https://img.shields.io/github.com/cpicha20/SMG/graphs/contributors.svg?style=plastic&logo=appveyor)](https://github.com/cpicha20/SMG/graphs/contributors)
+[![Contributors](https://img.shields.io/github/contributors/cpicha20/SMG.svg?style=plastic&logo=appveyor)](https://github.com/cpicha20/SMG/graphs/contributors)
 [![Issues](https://img.shields.io/github/issues/404pandas/react-portfolio.svg?style=plastic&logo=appveyor)](https://github.com/cpicha20/SMG/issues)
 
 </div>
