@@ -1,4 +1,4 @@
-// var fs = require('fs');
+// const fs = require('fs');
 
 // fs.readFile('../../seeds/games.json', function(err, file) { 
 //     if (err) {
