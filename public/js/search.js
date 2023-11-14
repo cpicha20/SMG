@@ -1,18 +1,18 @@
-const fs = require('fs');
+// const fs = require('fs');
 
-fs.readFile('../../seeds/games.json', function(err, file) { 
-    if (err) {
-        console.error('Error while reading the file:', err)
-      return
-      }
-      try {
-        const data = JSON.parse(file)
-        // output the parsed data
-        console.log(data)
-      } catch (err) {
-        console.error('Error while parsing JSON data:', err)
-      }
-});
+// fs.readFile('../../seeds/games.json', function(err, file) { 
+//     if (err) {
+//         console.error('Error while reading the file:', err)
+//       return
+//       }
+//       try {
+//         const data = JSON.parse(file)
+//         // output the parsed data
+//         console.log(data)
+//       } catch (err) {
+//         console.error('Error while parsing JSON data:', err)
+//       }
+// });
 
 
 // document.addEventListener("DOMContentLoaded", function () {
