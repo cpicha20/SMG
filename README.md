@@ -1,4 +1,4 @@
-# Share Ny Games
+# Share My Games
 
 <div align="center">
 
@@ -70,8 +70,15 @@
 The only pre-requisite to this portfolio is signing up on the page if you want to save your games. OTherwise you can just view the site. site [here](https://share-my-game-566086c3c183.herokuapp.com/)
 
 ## Usage
+Signing Up for the website
+![smgsignup](https://github.com/cpicha20/SMG/assets/144052327/a018da61-8265-47ed-9ead-aa7025b5ef47)
+The Library may be viewed without logging in, but you won't be able to add the review for the selected game.
+![smggamepage](https://github.com/cpicha20/SMG/assets/144052327/08ba18cd-4259-4677-97b7-cd41f620ebc4)
+Several past user reviews will be able to be saved and you can leave yours as well. The Add game will add the game to your profile. 
+![smgsinglegame](https://github.com/cpicha20/SMG/assets/144052327/b827d84b-872c-4ceb-b238-d2c2600bfa8c)
+If you check your profile page, you can see the games that you added and the reviews that you left.
+![smguserprofile](https://github.com/cpicha20/SMG/assets/144052327/37b99ed7-8cc9-43dc-b3cb-75f268284c6d)
 
-This portfolio is optimized for smaller screens!
 
 
 
